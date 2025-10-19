@@ -1,0 +1,9 @@
+# Directories
+__pycache__/
+data/
+mlartifacts/
+mlruns/
+.ruff_cache/
+# Files
+.env
+/data

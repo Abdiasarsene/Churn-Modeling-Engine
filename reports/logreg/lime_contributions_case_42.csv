@@ -1,0 +1,6 @@
+Feature,Contribution
+0.00 < Visit_Frequency <= 0.33,-0.2390381872686376
+0.00 < Used_Discount <= 0.50,-0.15846342300824914
+0.32 < Clusters <= 0.35,0.027354924018087274
+-0.50 < Average_Basket <= 0.00,-0.018753728327162416
+0.21 < Preferred_Category <= 0.28,-0.006850403632655959

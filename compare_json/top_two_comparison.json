@@ -1,0 +1,14 @@
+{
+  "automl": {
+    "recall_score": 1.0,
+    "latency_seconds": 0.0203
+  },
+  "random_forest": {
+    "recall_score": 1.0,
+    "latency_seconds": 0.0148
+  },
+  "logreg": {
+    "recall_score": 1.0,
+    "latency_seconds": 0.0094
+  }
+}
