@@ -10,12 +10,14 @@
 
 ---
 
-## 📚 Strategic Documentations
+## 📚 Strategic Docs
 
 - [Architecture & Metric Strategy](docs/architecture.md)
 - [Selection Strategy](docs/selection_strategy.md)
 - [Artifact Registry](artefacts.yaml)
 - [Latest Manifest](manifest.yaml)
+- [Explainability Reports](reports/)  
+  _SHAP and LIME visualizations for selected models._
 
 ---
 
@@ -52,11 +54,6 @@
 - **Stateless orchestration.** Each run is isolated and reproducible.  
 - **Built-in audit trail.** Parameters and metrics are logged automatically.  
 - **Scalable foundation.** Ready for distributed execution with Dask or Ray.
-
----
-
-## 📁 Model Explainability
-SHAP and LIME visualizations are available in the [`reports/`](reports/) folder.
 
 ---
 
