@@ -13,9 +13,13 @@
 ## 📚 Strategic Docs
 
 - [Architecture & Metric Strategy](docs/architecture.md)
+  _Modular design, metric hierarchy, and auditability principles._
 - [Selection Strategy](docs/selection_strategy.md)
+  _Explains how recall, ROC AUC, latency, and interpretability guide model promotion._
 - [Artifact Registry](artefacts.yaml)
+  _Documents paths, naming conventions, and roles of all persistent artifacts._
 - [Latest Manifest](manifest.yaml)
+  _Run-level summary of selected models, metrics, and justification_
 - [Explainability Reports](reports/)  
   _SHAP and LIME visualizations for selected models._
 
