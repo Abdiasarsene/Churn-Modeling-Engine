@@ -43,3 +43,13 @@
 - **Stateless orchestration.** Each run is isolated and reproducible.  
 - **Built-in audit trail.** Parameters and metrics are logged automatically.  
 - **Scalable foundation.** Ready for distributed execution with Dask or Ray.
+
+---
+
+## 📁 Model Explainability
+SHAP and LIME visualizations are available in the [`reports/`](reports/) folder.
+
+---
+
+👤 **Abdias Arsène**  
+*Sr. AI Consultant* 😉
