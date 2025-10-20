@@ -10,6 +10,15 @@
 
 ---
 
+## 📚 Strategic Documentations
+
+- [Architecture & Metric Strategy](docs/architecture.md)
+- [Selection Strategy](docs/selection_strategy.md)
+- [Artifact Registry](artefacts.yaml)
+- [Latest Manifest](manifest.yaml)
+
+---
+
 ## 🔃 Core Philosophy
 - **Separation of Concerns** — Training, serving, and monitoring live in distinct repositories.  
 - **Reproducibility** — Every artifact (model, preprocessor, metrics) is traceable and versioned.  
