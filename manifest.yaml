@@ -1,0 +1,18 @@
+selected_models:
+  - model_name: RandomForestClassifier
+    recall_score: 0.99
+    latency_seconds: 0.0148
+    tagged_as: production_ready
+    justification:
+      - Perfect recall
+      - SHAP and LIME confirm stable feature importance
+      - Latency acceptable for batch scoring
+
+  - model_name: LogisticRegression
+    recall_score: 0.99
+    latency_seconds: 0.0094
+    tagged_as: staging
+    justification:
+      - Perfect recall
+      - Fastest inference
+      - LIME interpretability partial, SHAP less stable

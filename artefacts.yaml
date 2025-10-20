@@ -1,0 +1,21 @@
+# artefacts.yaml — Strategic Artifact Registry
+
+reports:
+  path: reports/
+  purpose: Stores SHAP/LIME visualizations, metric summaries, and audit manifests
+  naming_convention: shap_{model_name}_{date}.png
+
+storage_models:
+  path: storage_models/
+  purpose: Serialized models tagged as production-ready or experimental
+
+storage_preprocessor:
+  path: storage_preprocessor/
+  purpose: Saved preprocessors (e.g. scalers, encoders) for reproducibility
+
+mlflow:
+  tracking_uri: http://localhost:5000
+  experiment_name: churn_modeling_engine
+  tags:
+    - production_ready
+    - experimental
