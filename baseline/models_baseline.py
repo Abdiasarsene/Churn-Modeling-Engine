@@ -1,4 +1,4 @@
-# trainer/baseline/models_baseline.py 
+# baseline/models_baseline.py 
 import logging
 from sklearn.dummy import DummyClassifier, DummyRegressor
 from sklearn.linear_model import LogisticRegression, LinearRegression

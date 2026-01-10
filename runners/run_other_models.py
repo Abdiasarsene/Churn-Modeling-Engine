@@ -1,8 +1,9 @@
 # runners/run_others_models
 import logging
+from core.minio_config import setup_minio_structure
 from utils.data_loader import load_and_split
 from other_models.training import OthersModelsTrainers
-from other_models.storage import OtherModelsStorageMLflow
+from other_models.storage import OtherModelsFullStorage
 
 # ====== LOGGING ======
 logging.basicConfig(level=logging.INFO)
@@ -12,6 +13,9 @@ logger = logging.getLogger(__name__)
 def main():
     try:
         logger.info("🚀 Starting training for other models")
+        
+        # Set up
+        setup_minio_structure()
 
         # Load data
         x_train, _, y_train, _, _ = load_and_split()
@@ -22,9 +26,8 @@ def main():
         logger.info(f"✅ Training completed: {list(trained_models.keys())}")
 
         # Log to Mlflow
-        storage = OtherModelsStorageMLflow()
-        for model_name, model in trained_models.items():
-            storage.log_model(model_name, model)
+        storage = OtherModelsFullStorage()
+        storage.store_models(trained_models)
         logger.info("✅ All models logged to MLflow")
 
     except Exception as e:

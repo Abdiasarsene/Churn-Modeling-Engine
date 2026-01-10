@@ -1,5 +1,6 @@
 # runners/run_interpretation.py
 import logging
+from top_one_model.best_models_saver import MinIOSaver
 from top_one_model.best_models_loader import TopBestModelsLoaders
 from explainers.shap_explainer import ShapExplainer
 from explainers.lime_explainer import LimeExplainer
@@ -18,6 +19,11 @@ def main():
     models = loader.load_best_models()
     logger.info(f"✅ {len(models)} models loaded: {list(models.keys())}")
 
+    # Save models on MinIO
+    saver = MinIOSaver()
+    for name, model in loader.toplevel_models.items():
+        saver.save_model(name, model)
+    
     # Prepare dataset
     x_train, x_test, y_train, y_test, _ = load_and_split()
     logger.info("✅ Dataset ready for interpretability")

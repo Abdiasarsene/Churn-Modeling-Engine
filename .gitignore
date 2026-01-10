@@ -4,6 +4,10 @@ data/
 mlartifacts/
 mlruns/
 .ruff_cache/
+.github/
+storage_models/
+storage_preprocessor/
+
 # Files
 .env
 /data

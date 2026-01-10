@@ -1,4 +1,4 @@
-# trainer/baseline/task_type.py  
+# baseline/task_type.py  
 import logging
 import pandas as pd 
 import numpy as np

@@ -5,7 +5,7 @@ from utils.preprocessing import get_preprocessing
 
 # ====== LOGGGING ======
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLoger(__name__)
+logger = logging.getLogger(__name__)
 
 # ====== TRAIN AUTOML MODELS ======
 class TrainAutoML:

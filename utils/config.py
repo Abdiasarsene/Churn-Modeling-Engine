@@ -1,4 +1,4 @@
-# trainer/config.py
+# utils/config.py
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # ====== SETTING ======
@@ -15,6 +15,9 @@ class Settings(BaseSettings):
     
     # Tracking uri
     mlflow_server: str
+    mlflow_s3_endpoint: str
+    mlflow_s3_endpoint_uri: str
+    mlflow_artifacts_uri: str
     
     # Experiments
     baseline_experiment: str
@@ -22,6 +25,11 @@ class Settings(BaseSettings):
     other_models_experiment: str
     top_models_experiment: str
     deploy_models_experiment: str
+    
+    # MinIO
+    minio_access_key: str
+    minio_secret_key: str
+    minio_bucket: str
     
     # All models
     dummy: str
