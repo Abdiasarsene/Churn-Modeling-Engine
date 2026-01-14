@@ -1,4 +1,5 @@
 services:
+  # ====== MinIO (artifact store) ======
   minio:
     image: minio/minio:latest
     container_name: minio_reutilise
@@ -14,6 +15,47 @@ services:
     networks:
       - model_engine_default
 
+  # ====== Postgres (MLflow backend store) ======
+  postgres:
+    image: postgres:13
+    container_name: mlflow_churn_postgres
+    environment:
+      POSTGRES_DB: mlflow
+      POSTGRES_USER: mlflow
+      POSTGRES_PASSWORD: mlflow
+    volumes:
+      - mlflow_pg:/var/lib/postgresql/data
+    networks:
+      - model_engine_default
+
+  # ====== MLflow Server ======
+  mlflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mlflow_server_churn
+    command: >
+      mlflow server
+      --backend-store-uri postgresql://mlflow:mlflow@postgres:5432/mlflow
+      --default-artifact-root s3://churn-model-engine/mlflow_storage
+      --host 0.0.0.0
+      --port 5000
+    environment:
+      MLFLOW_S3_ENDPOINT_URL: http://minio:9000
+      AWS_ACCESS_KEY_ID: minioadmin
+      AWS_SECRET_ACCESS_KEY: minioadmin
+      AWS_DEFAULT_REGION: us-east-1
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+      - minio
+    networks:
+      - model_engine_default
+
+volumes:
+  mlflow_pg:
+
 networks:
   model_engine_default:
-    external: true
+    driver: bridge
