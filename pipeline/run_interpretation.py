@@ -1,10 +1,10 @@
 # runners/run_interpretation.py
 import logging
-from top_one_model.best_models_saver import MinIOSaver
-from top_one_model.best_models_loader import TopBestModelsLoaders
-from explainers.shap_explainer import ShapExplainer
-from explainers.lime_explainer import LimeExplainer
-from utils.data_loader import load_and_split
+from champion_models.top_one_model.best_models_saver import MinIOSaver
+from champion_models.top_one_model.best_models_loader import TopBestModelsLoaders
+from explainability.shap_explainer import ShapExplainer
+from explainability.lime_explainer import LimeExplainer
+from scripts.utils.data_loader import load_and_split
 
 # ====== LOGGING ======
 logging.basicConfig(level=logging.INFO)

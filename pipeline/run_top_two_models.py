@@ -1,11 +1,11 @@
 # runners/run_two_models.py
 import logging
-from utils.data_loader import load_and_split
-from top_two_models.top_models_loader import BestModelsLoader
-from top_two_models.evaluate_final_metric import ModelEvaluator
-from top_two_models.compare_final_metrics import compare_models
-from top_two_models.dataframe_safe_predictor import DataFrameSafePredictor
-from top_two_models.store import ModelLogger
+from scripts.utils.data_loader import load_and_split
+from champion_models.top_two_models.top_models_loader import BestModelsLoader
+from champion_models.top_two_models.evaluate_final_metric import ModelEvaluator
+from champion_models.top_two_models.compare_final_metrics import compare_models
+from champion_models.top_two_models.dataframe_safe_predictor import DataFrameSafePredictor
+from champion_models.top_two_models.store import ModelLogger
 
 # ====== LOGGING ======
 logging.basicConfig(level=logging.INFO)

@@ -1,13 +1,13 @@
 # runners/run_top_three_models.py
 import logging
-from utils.config import settings
-from utils.data_loader import load_and_split
-from top_three_models.models_loaders import load_all_models_mlflow
-from top_three_models.local_backup_of_models import save_models_to_storage
-from top_three_models.cross_validation import CrossValidationModels
-from top_three_models.compare_models import StrategicComparator
-from top_three_models.store_models import TopModelsStorage
-from top_three_models.top_models import TopModelsSelector
+from scripts.utils.config import settings
+from scripts.utils.data_loader import load_and_split
+from champion_models.top_three_models.models_loaders import load_all_models_mlflow
+from champion_models.top_three_models.local_backup_of_models import save_models_to_storage
+from champion_models.top_three_models.cross_validation import CrossValidationModels
+from champion_models.top_three_models.compare_models import StrategicComparator
+from champion_models.top_three_models.store_models import TopModelsStorage
+from champion_models.top_three_models.top_models import TopModelsSelector
 
 # ====== LOGGING ======
 logging.basicConfig(level=logging.INFO)

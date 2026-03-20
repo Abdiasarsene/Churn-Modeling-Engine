@@ -1,9 +1,9 @@
 # runners/run_others_models
 import logging
-from core.minio_config import setup_minio_structure
-from utils.data_loader import load_and_split
-from other_models.training import OthersModelsTrainers
-from other_models.storage import OtherModelsFullStorage
+from scripts.core.minio_config import setup_minio_structure
+from scripts.utils.data_loader import load_and_split
+from models.candidate_models.training import OthersModelsTrainers
+from models.candidate_models.storage import OtherModelsFullStorage
 
 # ====== LOGGING ======
 logging.basicConfig(level=logging.INFO)

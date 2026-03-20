@@ -1,11 +1,11 @@
 # runners/run_baseline.py
 import logging
-from utils.data_loader import load_and_split
-from baseline.task_type import detect_task_type
-from baseline.models_baseline import BaselineBuilder
-from baseline.training_baseline import BaselineTrainer
-from baseline.storage_baseline import BaselineFullStorageModels
-from core.minio_config import setup_minio_structure
+from scripts.utils.data_loader import load_and_split
+from models.baseline.task_type import detect_task_type
+from models.baseline.models_baseline import BaselineBuilder
+from models.baseline.training_baseline import BaselineTrainer
+from models.baseline.storage_baseline import BaselineFullStorageModels
+from scripts.core.minio_config import setup_minio_structure
 
 # ====== LOGGING ======
 logging.basicConfig(level=logging.INFO)

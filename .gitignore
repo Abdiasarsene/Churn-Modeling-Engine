@@ -7,6 +7,7 @@ mlruns/
 .github/
 storage_models/
 storage_preprocessor/
+artifacts/
 
 # Files
 .env

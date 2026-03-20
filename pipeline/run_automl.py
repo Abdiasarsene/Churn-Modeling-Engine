@@ -1,10 +1,10 @@
 # runners/run_automl.py
 import logging
-from utils.data_loader import load_and_split
-from automl.train_automl import TrainAutoML
-from automl.extract_best_models import ExtractBestModels
-from automl.storage_automl import StorageAutoML
-from core.minio_config import setup_minio_structure
+from scripts.utils.data_loader import load_and_split
+from models.automl.train_automl import TrainAutoML
+from models.automl.extract_best_models import ExtractBestModels
+from models.automl.storage_automl import StorageAutoML
+from scripts.core.minio_config import setup_minio_structure
 
 # ====== LOGGING ======
 logging.basicConfig(level=logging.INFO)
